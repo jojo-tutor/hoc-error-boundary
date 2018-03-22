@@ -1,4 +1,4 @@
-.App {
+.App, h1 {
   text-align: center;
 }
 
@@ -7,6 +7,7 @@
   height: 80px;
 }
 
+
 .App-header {
   background-color: #222;
   height: 150px;
@@ -14,23 +15,27 @@
   color: white;
 }
 
-#buttons li {
+.navigation-buttons li {
   display:inline-block;
   list-style: none;
   text-align: center;
-  background-color: #000000;
+  background-color: #545454;
   margin-right: 30px;
   width: 150px;
   line-height: 60px;
 }
 
-#buttons li a {
+.navigation-buttons li.active {
+  background-color: rgb(238, 118, 70);
+}
+
+.navigation-buttons li a {
   text-decoration: none;
   color: #FFFFFF;
   display: block;
 }
 
-#buttons li a:hover {
+.navigation-buttons li a:hover {
   text-decoration: none;
   color: #000000;
   background-color: #33B5E5;
