@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom';
+import WithError from './WithError';
 
 import logo from './logo.svg';
 import './App.css';
@@ -8,17 +9,8 @@ class Home extends Component {
   state = {}
   handleClick = () => {
     this.setState({ count: true })
-    // try {
-      
-    // } catch (error) {
-    //   this.setState({ error })
-    // }
-  }
-  componentDidCatch() {
-    console.log('@@@');
   }
   render() {
-    console.log('@Home', this.props);
     if (this.state.count) {
       throw new Error('Unexpected Error!')
     }
@@ -31,4 +23,4 @@ class Home extends Component {
   }
 }
 
-export default Home;
+export default WithError(Home);
