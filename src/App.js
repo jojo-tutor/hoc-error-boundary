@@ -29,9 +29,9 @@ class App extends Component {
   render() {
     return (
       <Switch>
-        <Route exact path='/' render={(props) => (<Header {...props}>Home</Header>)} />
-        <Route path='/about' render={(props) => (<Header {...props}>About</Header>)} />
-        <Route path='/author' render={(props) => (<Header {...props}>Author</Header>)} />
+        <Route exact path='/' render={(props) => (<Header {...props}><Home/></Header>)} />
+        <Route path='/about' render={(props) => (<Header {...props}><About/></Header>)} />
+        <Route path='/author' render={(props) => (<Header {...props}><Author/></Header>)} />
       </Switch>
     );
   }

@@ -8,18 +8,20 @@ class ErrorHandler extends Component {
   }
 
   componentDidCatch(error, info) {
+    console.log('@@componentDidCatch');
     this.setState({ hasError: true });
-    console.error(error, info);
+    console.warn(error, info);
   }
 
   render() {
-  if (this.state.hasError) {
-    return (<Fragment>
-      <h1>Oops! Something went wrong! :(</h1>
-      <Link to='/'>Go to Home</Link>
-    </Fragment>)
-  }
-  return this.props.children;
+    console.log('@Error boundary');
+    if (this.state.hasError) {
+      return (<Fragment>
+        <h1>Oh no, Something went wrong! :(</h1>
+        <Link to='/'>Go to Home</Link>
+      </Fragment>)
+    }
+    return this.props.children;
   }
 }
 
