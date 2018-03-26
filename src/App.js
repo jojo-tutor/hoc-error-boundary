@@ -8,7 +8,7 @@ import Home from './Home';
 import About from './About';
 import Author from './Author';
 
-const Header = ({ match }) => {
+const Header = ({ match, children }) => {
   return (
     <div className='App'>
       <header className='App-header'>
@@ -19,6 +19,7 @@ const Header = ({ match }) => {
           <li className={match.path === '/author' ? 'active' : ''}><Link to='/author'>AUTHOR</Link></li>
         </ul>
       </header>
+      { children }
     </div>
   )
 }

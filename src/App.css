@@ -26,7 +26,7 @@
 }
 
 .navigation-buttons li.active {
-  background-color: rgb(238, 118, 70);
+  background-color: #33B5E5;
 }
 
 .navigation-buttons li a {
@@ -35,7 +35,7 @@
   display: block;
 }
 
-.navigation-buttons li a:hover {
+.navigation-buttons li a:hover, .active {
   text-decoration: none;
   color: #000000;
   background-color: #33B5E5;
