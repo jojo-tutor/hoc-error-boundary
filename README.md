@@ -10,7 +10,7 @@ CodePen:
  > https://codepen.io/jojo-tutor/pen/vdMJjQ?editors=1111
 
 Herokuapp:
- > https://component-vs-purecomponent.herokuapp.com/
+ > https://hoc-error-boundary.herokuapp.com/
 
 ## Installing
 To run app, follow the steps below:
