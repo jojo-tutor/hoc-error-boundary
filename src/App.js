@@ -7,6 +7,7 @@ import './App.css';
 import Home from './Home';
 import About from './About';
 import Author from './Author';
+import ErrorHandler from './ErrorHandler'
 
 const Header = ({ match, children }) => {
   return (
@@ -19,7 +20,7 @@ const Header = ({ match, children }) => {
           <li className={match.path === '/author' ? 'active' : ''}><Link to='/author'>AUTHOR</Link></li>
         </ul>
       </header>
-      { children }
+      <ErrorHandler>{ children }</ErrorHandler>
     </div>
   )
 }
