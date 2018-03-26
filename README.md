@@ -16,7 +16,7 @@ Herokuapp:
 To run app, follow the steps below:
 
 ```
-git clone https://github.com/jojo-tutor/react-component-vs-purecomponent.git
+git clone https://github.com/jojo-tutor/hoc-error-boundary.git
 cd react-component-vs-purecomponent
 npm i
 npm start
