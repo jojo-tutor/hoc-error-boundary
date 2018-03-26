@@ -1,5 +1,4 @@
-import React, { PureComponent, Component, Fragment } from 'react';
-import { Switch, Route, Link } from 'react-router-dom';
+import React, { PureComponent } from 'react';
 
 function WithError(ChildComponent) {
   return class extends PureComponent {
@@ -10,10 +9,7 @@ function WithError(ChildComponent) {
     }
     render() {
       if (this.state.hasError) {
-        return (<Fragment>
-          <h1>Oh no, Something went wrong! :(</h1>
-          <Link to='/'>Go to Home</Link>
-        </Fragment>)
+        return (<h1>Oh no, Something went wrong! :(</h1>)
       }
       return <ChildComponent/>
     }

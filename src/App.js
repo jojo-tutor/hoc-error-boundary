@@ -7,7 +7,6 @@ import './App.css';
 import Home from './Home';
 import About from './About';
 import Author from './Author';
-import ErrorHandler from './ErrorHandler'
 
 const Header = ({ match, children }) => {
   return (
