@@ -7,6 +7,7 @@ A react higher order function that handles error boundary. This is an implementa
 
 ## Usage
 [Todo: Deploy in NPM]
+[Todo: Sample Usage]
 
 
 ## Demonstration
