@@ -11,7 +11,7 @@ function WithError(ChildComponent) {
       if (this.state.hasError) {
         return (<h1>Oh no, Something went wrong! :(</h1>)
       }
-      return <ChildComponent/>
+      return <ChildComponent {...this.props} />
     }
   }
 }

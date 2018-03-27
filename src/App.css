@@ -47,6 +47,14 @@
   font-size: large;
 }
 
+.page-about .mini {
+  width: 80%;
+  border: 5px solid green;
+  padding: 25px;
+  margin: 25px auto;
+  position:relative;
+}
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
