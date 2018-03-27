@@ -3,7 +3,7 @@
 ![Packagist](https://img.shields.io/packagist/l/doctrine/orm.svg)
 
 ## About
-A react higher order function that handles error boundary. This is an implementation of the new feature in React 16: Error Handling. This is reusable function that accepts a component (functional or class-based), and returns a new component that has error boundary. This uses a pure fuction with no dependency.
+A react higher order function that handles error boundary. This is an implementation of the new feature in [React 16: Error Handling](https://reactjs.org/blog/2017/07/26/error-handling-in-react-16.html). This is reusable function that accepts a component (functional or class-based), and returns a new component that has error boundary. This uses a pure fuction with no dependency.
 
 ## Demonstration
 CodePen:
