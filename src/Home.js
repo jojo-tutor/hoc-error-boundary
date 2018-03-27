@@ -15,12 +15,7 @@ class Home extends Component {
       throw new Error('Unexpected Error!')
     }
     return (
-      <div>
-        <h1 className="App-title">Container</h1>
-        <p className="App-description">This whole container is wrapped with the higher order function that handles the error.</p>
-        <p className="App-instruction">Click the button below to throw error programmatically.</p>
-        <button onClick={this.handleClick}>Throw Error</button>
-      </div>
+      <h1 className="App-title">Home</h1>
     );
   }
 }

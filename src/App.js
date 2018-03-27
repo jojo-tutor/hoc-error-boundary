@@ -5,21 +5,26 @@ import logo from './logo.svg';
 import './App.css';
 
 import Home from './Home';
-import About from './About';
-import Author from './Author';
+import Example1 from './Example1';
+import Example2 from './Example2';
+import Example3 from './Example3';
 
 const Header = ({ match, children }) => {
   return (
     <div className='App'>
       <header className='App-header'>
-        <img src={logo} className='App-logo' alt='logo' />
-        <ul className='navigation-buttons'>
-          <li className={match.path === '/' ? 'active' : ''}><Link to='/'>HOME</Link></li>
-          <li className={match.path === '/about' ? 'active' : ''}><Link to='/about'>ABOUT</Link></li>
-          <li className={match.path === '/author' ? 'active' : ''}><Link to='/author'>AUTHOR</Link></li>
-        </ul>
+        <nav>
+          <ul className='navigation-buttons'>
+            <li className={match.path === '/' ? 'active' : ''}><Link to='/'>ReadMe</Link></li>
+            <li className={match.path === '/example1' ? 'active' : ''}><Link to='/example1'>Example 1</Link></li>
+            <li className={match.path === '/example2' ? 'active' : ''}><Link to='/example2'>Example 2</Link></li>
+            <li className={match.path === '/example3' ? 'active' : ''}><Link to='/example3'>Example 3</Link></li>
+          </ul>
+        </nav>
       </header>
-      { children }
+      <div className='content'>
+        { children }
+      </div>
     </div>
   )
 }
@@ -29,8 +34,9 @@ class App extends Component {
     return (
       <Switch>
         <Route exact path='/' render={(props) => (<Header {...props}><Home/></Header>)} />
-        <Route path='/about' render={(props) => (<Header {...props}><About/></Header>)} />
-        <Route path='/author' render={(props) => (<Header {...props}><Author/></Header>)} />
+        <Route exact path='/example1' render={(props) => (<Header {...props}><Example1/></Header>)} />
+        <Route path='/example2' render={(props) => (<Header {...props}><Example2/></Header>)} />
+        <Route path='/example3' render={(props) => (<Header {...props}><Example3/></Header>)} />
       </Switch>
     );
   }

@@ -7,7 +7,10 @@ import './App.css';
 class Author extends Component {
   render() {
     return (
-      <h1 className="App-title">Author</h1>
+      <div className='page-example3'>
+        <h1 className="App-title">Runtime error handling</h1>
+        <p>This component throws an error when data handled is not expected by the component logic.</p>
+      </div>
     );
   }
 }
