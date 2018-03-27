@@ -7,7 +7,7 @@ A react higher order component that handles error boundary. This is an implement
 
 ## Demonstration
 CodePen:
- > https://codepen.io/jojo-tutor/pen/vdMJjQ?editors=1111
+ > https://codepen.io/jojo-tutor/pen/GxOemZ?editors=1111
 
 Herokuapp:
  > https://hoc-error-boundary.herokuapp.com/
