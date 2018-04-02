@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import WithError from './WithError';
+import withErrorHandler from './withErrorHandler';
 
 import logo from './logo.svg';
 import './App.css';
@@ -46,9 +46,9 @@ class About extends Component {
     this.setState(({ counter }) => ({ counter: counter + 1 }))
   }
   render() {
-    const WrappedFunctional1 = WithError(FunctionalComponent1)
-    const WrappedFunctional2 = WithError(FunctionalComponent2)
-    const WrappedFunctional3 = WithError(FunctionalComponent3)
+    const WrappedFunctional1 = withErrorHandler(FunctionalComponent1)
+    const WrappedFunctional2 = withErrorHandler(FunctionalComponent2)
+    const WrappedFunctional3 = withErrorHandler(FunctionalComponent3)
     const { counter } = this.state
     return (
       <div className='page-example2'>

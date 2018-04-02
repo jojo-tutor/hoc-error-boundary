@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 
-function WithError(ChildComponent) {
+function withErrorHandler(ChildComponent) {
   return class extends PureComponent {
     state = {}
     componentDidCatch(error, info) {
@@ -16,4 +16,4 @@ function WithError(ChildComponent) {
   }
 }
 
-export default WithError
+export default withErrorHandler

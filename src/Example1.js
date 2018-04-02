@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom';
-import WithError from './WithError';
+import withErrorHandler from './withErrorHandler';
 
 import logo from './logo.svg';
 import './App.css';
@@ -25,4 +25,4 @@ class Example1 extends Component {
   }
 }
 
-export default WithError(Example1);
+export default withErrorHandler(Example1);
