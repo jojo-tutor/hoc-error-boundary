@@ -51,7 +51,7 @@
   font-size: large;
 }
 
-.page-example2 .mini {
+.page-example1, .page-example2 .mini, .page-example3 {
   width: 80%;
   border: 5px solid green;
   padding: 25px;

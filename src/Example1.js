@@ -15,7 +15,7 @@ class Example1 extends Component {
       throw new Error('Unexpected Error!')
     }
     return (
-      <div>
+      <div className='page-example1'>
         <h1 className="App-title">Container, Smart or Class-based Component</h1>
         <p className="App-description">This whole component is wrapped with the higher order function that handles the error.</p>
         <p className="App-instruction">Click the button below to throw error programmatically.</p>

@@ -1,19 +1,32 @@
-import React, { PureComponent } from 'react';
+import React, { PureComponent } from 'react'
+import PropTypes from 'prop-types'
 
 function withErrorHandler(ChildComponent) {
   return class extends PureComponent {
-    state = {}
+    state = {
+      hasError: false
+    }
     componentDidCatch(error, info) {
-      this.setState({ hasError: true });
-      console.warn(error, info);
+      this.setState({ hasError: true })
+      this.props.onError(error, info)
     }
     render() {
       if (this.state.hasError) {
-        return (<h1>Oh no, Something went wrong! :(</h1>)
+        return this.props.errorElement
       }
-      return <ChildComponent {...this.props} />
+      return (<ChildComponent {...this.props} />)
     }
   }
+}
+
+withErrorHandler.defaultProps = {
+  onError: () => {},
+  errorElement: (<h1>Oh no, Something went wrong! :( </h1>)
+}
+
+withErrorHandler.propTypes = {
+  onError: PropTypes.func,
+  errorElement: PropTypes.element
 }
 
 export default withErrorHandler

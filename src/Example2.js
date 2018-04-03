@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import ErrorHandler from './ErrorHandler';
+
 import withErrorHandler from './withErrorHandler';
 
 import logo from './logo.svg';
@@ -46,7 +48,6 @@ class About extends Component {
     this.setState(({ counter }) => ({ counter: counter + 1 }))
   }
   render() {
-    const WrappedFunctional1 = withErrorHandler(FunctionalComponent1)
     const WrappedFunctional2 = withErrorHandler(FunctionalComponent2)
     const WrappedFunctional3 = withErrorHandler(FunctionalComponent3)
     const { counter } = this.state
@@ -55,7 +56,9 @@ class About extends Component {
         <h1 className="App-title">Functional or Dumb Components</h1>
         <button onClick={this.handleIncrement}>Increment Counter</button>
         <p>Counter: { counter }</p>
-        <WrappedFunctional1 counter={counter} />
+        <ErrorHandler onError={() => alert('Error!')} errorElement={<div>I'm custom error element!</div>}>
+          <FunctionalComponent1 counter={counter} />
+        </ErrorHandler>
         <WrappedFunctional2 counter={counter} />
         <WrappedFunctional3 counter={counter} />
       </div>
