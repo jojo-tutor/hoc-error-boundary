@@ -1,15 +1,14 @@
-import React, { PureComponent } from 'react'
-import PropTypes from 'prop-types'
-
+import React from 'react'
 import ErrorHandler from './ErrorHandler'
 
-const withErrorHandler = (ChildComponent, onError, errorElement) => props => {
-  console.log('props: ', props);
-  return (
-    <ErrorHandler>
-      <ChildComponent/>
-    </ErrorHandler>
-  )
-}
+const withErrorHandler = (
+  ChildComponent,
+  errorElement,
+  onError
+) => props => (
+  <ErrorHandler errorElement={errorElement} onError={onError}>
+    <ChildComponent {...props} />
+  </ErrorHandler>
+)
 
 export default withErrorHandler
