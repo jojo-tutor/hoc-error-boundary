@@ -2,6 +2,9 @@
 ![Wercker](https://img.shields.io/wercker/ci/wercker/docs.svg)
 ![Packagist](https://img.shields.io/packagist/l/doctrine/orm.svg)
 
+## Status
+Ongoing...
+
 ## About
 A react higher order function that handles error boundary. This is an implementation of the new feature in [React 16: Error Handling](https://reactjs.org/blog/2017/07/26/error-handling-in-react-16.html). This is reusable function that accepts a component (functional or class-based), and returns a new component that has error boundary. This is a pure fuction with no dependency.
 
