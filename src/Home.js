@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
-import { Switch, Route } from 'react-router-dom';
 import { withErrorHandler } from 'react-error-handler';
-
-import logo from './logo.svg';
 import './App.css';
 
 class Home extends Component {
@@ -15,7 +12,14 @@ class Home extends Component {
       throw new Error('Unexpected Error!')
     }
     return (
-      <h1 className="App-title">Home</h1>
+      <div>
+        <h1 className="App-title">
+          React Error Handler
+        </h1>
+        <p>
+          Todo: [Documentation]
+        </p>
+      </div>
     );
   }
 }

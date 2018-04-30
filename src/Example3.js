@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
-import { Switch, Route, Link } from 'react-router-dom';
 import { withErrorHandler } from 'react-error-handler';
-
-import logo from './logo.svg';
 import './App.css';
 
 class Example3 extends Component {
