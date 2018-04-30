@@ -36,7 +36,7 @@ const FunctionalComponent3 = ({ counter }) => {
 }
 
 
-class About extends Component {
+class Example2 extends Component {
   state ={
     counter: 0
   }
@@ -62,4 +62,4 @@ class About extends Component {
   }
 }
 
-export default About;
+export default Example2;
