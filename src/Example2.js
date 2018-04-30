@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import ErrorHandler from './ErrorHandler';
-
-import withErrorHandler from './withErrorHandler';
+import { ErrorHandler, withErrorHandler } from 'react-error-handler';
 
 import logo from './logo.svg';
 import './App.css';
