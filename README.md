@@ -1,5 +1,4 @@
 # React Higher Order Function (Error Boundary)
-![Wercker](https://img.shields.io/wercker/ci/wercker/docs.svg)
 ![Packagist](https://img.shields.io/packagist/l/doctrine/orm.svg)
 
 ## About

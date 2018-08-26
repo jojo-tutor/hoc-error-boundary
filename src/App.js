@@ -13,7 +13,7 @@ const Header = ({ match, children }) => {
       <header className='App-header'>
         <nav>
           <ul className='navigation-buttons'>
-            <li className={match.path === '/' ? 'active' : ''}><Link to='/'>ReadMe</Link></li>
+            <li className={match.path === '/' ? 'active' : ''}><Link to='/'>Home</Link></li>
             <li className={match.path === '/example1' ? 'active' : ''}><Link to='/example1'>Example 1</Link></li>
             <li className={match.path === '/example2' ? 'active' : ''}><Link to='/example2'>Example 2</Link></li>
             <li className={match.path === '/example3' ? 'active' : ''}><Link to='/example3'>Example 3</Link></li>

@@ -35,7 +35,8 @@ const FunctionalComponent3 = ({ counter }) => {
     </div>)
 }
 
-
+const WrappedFunctional2 = withErrorHandler(FunctionalComponent2)
+const WrappedFunctional3 = withErrorHandler(FunctionalComponent3)
 class Example2 extends Component {
   state ={
     counter: 0
@@ -43,16 +44,17 @@ class Example2 extends Component {
   handleIncrement = () => {
     this.setState(({ counter }) => ({ counter: counter + 1 }))
   }
+  handleError = () => {
+    alert('Error!')
+  }
   render() {
-    const WrappedFunctional2 = withErrorHandler(FunctionalComponent2)
-    const WrappedFunctional3 = withErrorHandler(FunctionalComponent3)
     const { counter } = this.state
     return (
       <div className='page-example2'>
         <h1 className="App-title">Functional or Dumb Components</h1>
         <button onClick={this.handleIncrement}>Increment Counter</button>
         <p>Counter: { counter }</p>
-        <ErrorHandler onError={() => alert('Error!')} errorElement={<div>I'm custom error element!</div>}>
+        <ErrorHandler onError={this.handleError} errorElement={<div>I'm custom error element!</div>}>
           <FunctionalComponent1 counter={counter} />
         </ErrorHandler>
         <WrappedFunctional2 counter={counter} />
